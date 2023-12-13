@@ -1,0 +1,24 @@
+.language-selector {
+    display: flex;
+    position: fixed;
+    top: 10px;
+    /* Ajuste conforme necessário para a distância do topo */
+    right: 20px;
+    /* Ajuste conforme necessário para a distância da direita */
+
+}
+
+.language-selector>button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 40px;
+    /* Espaço entre eles */
+}
+
+.language-selector>button img {
+    width: 35px;
+    /* Ajuste conforme necessário para o novo tamanho da bandeira */
+    height: 35px;
+    /* Ajuste conforme necessário para o novo tamanho da bandeira */
+}

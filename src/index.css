@@ -1,0 +1,35 @@
+/* Config CSS da pág login */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Altura de 100% da tela */
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    font: 14px;
+    width: 100%;
+    font-family: Tahoma;
+}
+
+/* Tirar sublinhado dos Links */
+a {
+    text-decoration: none;
+}
+
+/* Tirar bolinhas da lista ordenada */
+
+ul {
+    list-style: none;
+}
+
+/* Config botão com a mãozinha pra dizer que é clicável */
+button {
+    cursor: pointer;
+}
