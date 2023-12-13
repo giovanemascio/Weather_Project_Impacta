@@ -1,7 +1,7 @@
 // utilização do banco firebase
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-
+import { getStorage } from 'firebase/storage'
 // utilização do auth
 import { getAuth } from 'firebase/auth'
 
@@ -22,7 +22,9 @@ const firebaseApp = initializeApp(firebaseConfig);
 const db = getFirestore(firebaseApp);
 
 // utilização do auth
-const auth = getAuth(firebaseApp)
+const auth = getAuth(firebaseApp);
+
+const storage = getStorage(firebaseApp);
 
 
-export { db, auth };
+export { db, auth, storage };

@@ -4,7 +4,7 @@ import { useState } from 'react'
 //Para acessar a página de SignUp atavés de routes:
 import { Link } from 'react-router-dom'
 //Importar conexão e método login firebase:
-import { auth } from '../../firebaseConnection'
+import { auth } from '../../services/firebaseConnection'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 //Importar hook para navegar o usuário, depois instanciar ele:
 import { useNavigate } from 'react-router-dom'

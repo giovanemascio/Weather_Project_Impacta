@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 //Importar component da seleção de linguagem:
 import { LanguageSelector } from '../../components/languageSelector';
 //Importar conexão e método login firebase:
-import { auth } from '../../firebaseConnection'
+import { auth } from '../../services/firebaseConnection'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 //Importar hook para navegar o usuário, depois instanciar ele:
 import { useNavigate } from 'react-router-dom'
