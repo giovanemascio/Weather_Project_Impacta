@@ -1,39 +1,12 @@
-import { useState, useEffect } from 'react'
-import { auth } from '../services/firebaseConnection'
-import { onAuthStateChanged } from 'firebase/auth'
+import { useContext } from 'react'
+//import { auth } from '../services/firebaseConnection'
+//import { onAuthStateChanged } from 'firebase/auth'
 import { Navigate } from 'react-router-dom';
+import { AuthContext } from '../contexts/auth';
 
 // Para proteger a routa admin - apenas usuários logados acessarem:
 export default function Private({ children }) {
-    const [loading, setLoading] = useState(true);
-    const [signed, setSigned] = useState(false);
-
-    useEffect(() => {
-        async function checkLogin() {
-            const unsub = onAuthStateChanged(auth, (user) => {
-                //se tem user logado:
-                if (user) {
-                    const userData = {
-                        uid: user.uid,
-                        email: user.email,
-                    }
-
-                    //Salvar no localStorage:
-                    localStorage.setItem("@detailUser", JSON.stringify(userData))
-
-                    setLoading(false);
-                    setSigned(true);
-
-                } else {
-                    //não possui user logado:
-                    setLoading(false);
-                    setSigned(false);
-                }
-            })
-        }
-
-        checkLogin();
-    }, [])
+    const { signed, loading } = useContext(AuthContext);
 
     if (loading) {
         return (
@@ -44,5 +17,6 @@ export default function Private({ children }) {
     if (!signed) {
         return <Navigate to="/" />
     }
-    return children;
+
+    return children
 }

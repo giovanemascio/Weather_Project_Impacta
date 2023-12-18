@@ -11,6 +11,11 @@
         "Já possui uma conta? Faça login!": "Already have an account? Log in!",
         "Registrar": "Register",
         "Vamos criar sua conta!": "Let's create your account!",
-        "Seu nome": "Your name"
+        "Seu nome": "Your name",
+        "Carregando...": "Loading...",
+        "Cadastrado com sucesso!": "Successfully registered!",
+        "Seja bem-vindo!": "Welcome!",
+        "Bem-vindo(a) de volta!": "Welcome back!",
+        "Ops! Algo deu errado.": "Ops! Something went wrong."
     }
 }

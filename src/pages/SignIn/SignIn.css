@@ -1,4 +1,4 @@
-.SignIn-container {
+.signIn-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,12 +9,12 @@
     color: #fff;
 }
 
-.SignIn-container h1 {
+.signIn-container h1 {
     font-size: 48px;
     margin-bottom: 8px;
 }
 
-.SignIn-container span {
+.signIn-container span {
     margin-bottom: 28px;
 }
 

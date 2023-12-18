@@ -11,6 +11,11 @@
         "Já possui uma conta? Faça login!": "Já possui uma conta? Faça login!",
         "Registrar": "Registrar",
         "Vamos criar sua conta!": "Vamos criar sua conta!",
-        "Seu nome": "Seu nome"
+        "Seu nome": "Seu nome",
+        "Carregando...": "Carregando...",
+        "Cadastrado com sucesso!": "Cadastrado com sucesso!",
+        "Seja bem-vindo!": "Seja bem-vindo!",
+        "Bem-vindo(a) de volta!": "Bem-vindo(a) de volta!",
+        "Ops! Algo deu errado.": "Ops! Algo deu errado."
     }
 }
