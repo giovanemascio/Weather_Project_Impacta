@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 //Para acessar a página de SignUp atavés de routes:
 import { Link } from 'react-router-dom'
 //Importar conexão e método login firebase:
 import { auth } from '../../services/firebaseConnection'
+import { AuthContext } from '../../contexts/auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 //Importar hook para navegar o usuário, depois instanciar ele:
 import { useNavigate } from 'react-router-dom'
@@ -22,34 +23,24 @@ export default function SignUp() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const { signUp, loadingAuth } = useContext(AuthContext);
+
     const { t, i18n } = useTranslation();
 
     const navigate = useNavigate();
 
     //Função do formulário que recebe onSubmit={handleLogin}:
     async function handleSignUp(e) {
-        // pra não atualizar a página:
         e.preventDefault();
 
         // Verifica se os campos estão preenchidos para prosseguir:
         if (email !== '' && password !== '') {
-            await createUserWithEmailAndPassword(auth, email, password)
-                .then(() => {
-                    // Navegar até admin:
-                    navigate('/admin', { replace: true })
-                })
-                .catch(() => {
-                    console.log("Erro ao fazer o cadastro!")
-                })
-
-        } else {
-            alert("Preencha todos os campos!")
+            await signUp(email, password, name)
         }
-
     }
 
     return (
-        <div className="SignIn-container">
+        <div className="signIn-container">
             <LanguageSelector />
             <h1>{t("Cadastre-se")} <FontAwesomeIcon icon={faAt} /></h1>
 
@@ -81,7 +72,9 @@ export default function SignUp() {
                     required
                 />
 
-                <button type="submit">{t('Registrar')}</button>
+                <button type="submit">
+                {loadingAuth ? t('Carregando...') : t('Registrar')}
+                </button>
             </form>
 
             <Link className="button-link" to="/">
@@ -90,3 +83,5 @@ export default function SignUp() {
         </div>
     )
 }
+
+//{loadingAuth ? t('Carregando...') : t('Registrar')}
