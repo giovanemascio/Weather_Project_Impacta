@@ -14,8 +14,8 @@ body,
 
 body {
     font: 14px;
-    width: 100%;
-    font-family: Tahoma;
+    font-family: sans-serif;
+    background-color: #EFEFEF;
 }
 
 /* Tirar sublinhado dos Links */
