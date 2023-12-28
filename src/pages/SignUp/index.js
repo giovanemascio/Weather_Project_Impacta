@@ -25,7 +25,7 @@ export default function SignUp() {
 
     const { signUp, loadingAuth } = useContext(AuthContext);
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const navigate = useNavigate();
 
@@ -73,7 +73,7 @@ export default function SignUp() {
                 />
 
                 <button type="submit">
-                {loadingAuth ? t('Carregando...') : t('Registrar')}
+                    {loadingAuth ? t('Carregando...') : t('Registrar')}
                 </button>
             </form>
 

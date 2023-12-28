@@ -16,6 +16,11 @@
         "Cadastrado com sucesso!": "Cadastrado com sucesso!",
         "Seja bem-vindo!": "Seja bem-vindo!",
         "Bem-vindo(a) de volta!": "Bem-vindo(a) de volta!",
-        "Ops! Algo deu errado.": "Ops! Algo deu errado."
+        "Ops! Algo deu errado.": "Ops! Algo deu errado.",
+
+        "Perfil": "Perfil",
+        "Nome": "Nome",
+        "Salvar": "Salvar",
+        "Sair": "Sair"
     }
 }

@@ -1,7 +1,7 @@
 .language-selector {
     display: flex;
     position: fixed;
-    top: 10px;
+    bottom: 10px;
     /* Ajuste conforme necessário para a distância do topo */
     right: 20px;
     /* Ajuste conforme necessário para a distância da direita */

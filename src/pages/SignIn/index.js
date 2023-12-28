@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
 import { useState, useContext } from 'react'
-import './signIn.css'
+import './signin.css'
 //Para acessar a página de Register atavés de routes:
 import { Link } from 'react-router-dom'
 //Importar i18n
@@ -21,7 +21,7 @@ export default function SignIn() {
 
     const { signIn, loadingAuth } = useContext(AuthContext)
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     //const navigate = useNavigate();
 

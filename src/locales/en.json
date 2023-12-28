@@ -16,6 +16,11 @@
         "Cadastrado com sucesso!": "Successfully registered!",
         "Seja bem-vindo!": "Welcome!",
         "Bem-vindo(a) de volta!": "Welcome back!",
-        "Ops! Algo deu errado.": "Ops! Something went wrong."
+        "Ops! Algo deu errado.": "Ops! Something went wrong.",
+
+        "Perfil": "Profile",
+        "Nome": "Name",
+        "Salvar": "Save",
+        "Sair": "Exit"
     }
 }
