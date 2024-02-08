@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../contexts/auth'
 //import icons:
-import { FiHome, FiUser, FiSettings } from 'react-icons/fi'
+import { FiGlobe, FiUser, FiSettings } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next';
 import './header.css';
 import { LanguageSelector } from '../../components/languageSelector';
@@ -21,9 +21,9 @@ export default function Header() {
                     <img src={user.avatarUrl === null ? avatarImg : user.avatarUrl} alt="Foto do usuário" />
                 </div>
 
-                <Link to="/home">
-                    <FiHome color="#FFF" size={24} />
-                    {t('Homee')}
+                <Link to="/search">
+                    <FiGlobe color="#FFF" size={24} />
+                    {t('Pesquisar')}
                 </Link>
 
                 <Link to="/Naosei">

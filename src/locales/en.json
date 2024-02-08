@@ -6,7 +6,7 @@
         "Digite seu email": "Enter your email",
         "Senha": "Password",
         "idioma": "language",
-        
+
         "Cadastre-se": "Register",
         "Já possui uma conta? Faça login!": "Already have an account? Log in!",
         "Registrar": "Register",
@@ -18,9 +18,15 @@
         "Bem-vindo(a) de volta!": "Welcome back!",
         "Ops! Algo deu errado.": "Ops! Something went wrong.",
 
+        "Pesquisar": "Search",
+
         "Perfil": "Profile",
         "Nome": "Name",
         "Salvar": "Save",
-        "Sair": "Exit"
+        "Sair": "Exit",
+        "Minha conta": "My account",
+        "Envie uma imagem do tipo PNG ou JPEG": "Send a PNG or JPEG image",
+        "Atualizado com sucesso!": "Updated successfully!",
+        "Nome atualizado com sucesso!": "Name updated successfully!"
     }
 }

@@ -53,7 +53,7 @@ function AuthProvider({ children }) {
                 storageUser(data);
                 setLoadingAuth(false);
                 toast.success(t("Bem-vindo(a) de volta!"));
-                navigate("/home")
+                navigate("/search")
             })
             .catch((error) => {
                 console.log(error);
@@ -87,7 +87,7 @@ function AuthProvider({ children }) {
                         storageUser(data);
                         setLoadingAuth(false);
                         toast.success(t("Seja bem-vindo!"))
-                        navigate("/home")
+                        navigate("/search")
                     })
             })
             .catch((error) => {

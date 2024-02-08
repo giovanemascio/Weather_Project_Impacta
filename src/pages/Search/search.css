@@ -1,0 +1,102 @@
+.containerSearch {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    /* Empilha os elementos verticalmente */
+    justify-content: flex-start;
+    /* Alinha ao topo da div */
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 1.0em;
+    margin-bottom: 1em;
+
+}
+
+.weather {
+    width: 100%;
+    text-align: center;
+    /* Alinha o conteúdo centralmente */
+    margin: 10px auto;
+    color: #181c2e;
+}
+
+.search {
+
+    display: flex;
+    align-items: center;
+    /* Alinha o input e o botão verticalmente */
+    text-align: center;
+    /* Alinha o conteúdo centralmente */
+    justify-content: center;
+}
+
+.search button {
+    border-radius: 5px;
+    background-color: #181c2e;
+    color: #FFF;
+    padding: 0.7em;
+    margin-left: 0.5em;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    font-size: 0.6em;
+    /* text-align: center;  Alinha o conteúdo centralmente */
+}
+
+.search input {
+    font-size: 1.0em;
+    padding: 0.7em;
+    border: 0;
+    border-radius: 5px;
+    max-width: 600px;
+    flex: 0.7;
+}
+
+.winfo .iconCondition {
+    padding-top: 10px; /* Ajuste conforme necessário */
+    font-size: 100px;
+}
+
+/*.winfo .iconHum {
+    padding: 0.1em;
+    width: 100px;
+}*/
+
+/*.winfo .iconWind {
+    padding: 0.1em;
+    width: 100px;
+}*/
+
+.winfo h1 {
+    font-size: 70px;
+    font-weight: 500;
+    margin-top: 5px;
+    font-family: 'Geneva';
+}
+
+.winfo h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: 'Geneva';
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5em;
+}
+
+.details .col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-right: 50px;
+}
+
+/* Adicione espaçamento ou margem direita para a última coluna para evitar espaçamento extra à direita */
+.details .col:last-child {
+    margin-right: 0;
+}

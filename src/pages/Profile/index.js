@@ -37,7 +37,7 @@ export default function Profile() {
         setImageAvatar(image)
         setAvatarUrl(URL.createObjectURL(image))
       } else {
-        alert("Envie uma imagem do tipo PNG ou JPEG")
+        alert(t("Envie uma imagem do tipo PNG ou JPEG"));
         setImageAvatar(null);
         return;
       }
@@ -66,7 +66,7 @@ export default function Profile() {
 
               setUser(data);
               storageUser(data);
-              toast.success("Atualizado com sucesso!")
+              toast.success(t("Atualizado com sucesso!"))
             })
         })
       })
@@ -89,7 +89,7 @@ export default function Profile() {
 
           setUser(data);
           storageUser(data);
-          toast.success("Nome atualizado com sucesso!")
+          toast.success(t("Nome atualizado com sucesso!"))
         })
     } else if (nome !== '' && imageAvatar !== null) {
       // Atualizar nome e foto:
@@ -102,7 +102,7 @@ export default function Profile() {
       <Header />
 
       <div className="content">
-        <Title name="Minha conta">
+        <Title name={t("Minha conta")}>
           <FiSettings size={25} />
         </Title>
 
