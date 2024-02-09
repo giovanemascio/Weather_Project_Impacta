@@ -18,9 +18,16 @@
         "Bem-vindo(a) de volta!": "Bem-vindo(a) de volta!",
         "Ops! Algo deu errado.": "Ops! Algo deu errado.",
 
+        "Pesquisar": "Pesquisar",
+
         "Perfil": "Perfil",
         "Nome": "Nome",
         "Salvar": "Salvar",
-        "Sair": "Sair"
+        "Sair": "Sair",
+        "Minha conta": "Minha conta",
+        "Envie uma imagem do tipo PNG ou JPEG": "Envie uma imagem do tipo PNG ou JPEG", 
+        "Atualizado com sucesso!": "Atualizado com sucesso!",
+        "Nome atualizado com sucesso!": "Nome atualizado com sucesso!"
+
     }
 }
