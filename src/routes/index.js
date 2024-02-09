@@ -3,10 +3,11 @@
 import { Routes, Route } from 'react-router-dom'
 import SignIn from '../pages/SignIn'
 import SignUp from '../pages/SignUp';
-import Home from '../pages/Home'
+import Search from '../pages/Search'
+import Profile from '../pages/Profile'
 // Importar Private para proteger rota admin:
 import Private from './Private';
-import Profile from '../pages/Profile'
+
 
 
 
@@ -17,7 +18,7 @@ function RoutesApp() {
             <Route path='/' element={<SignIn />} />
             <Route path='/register' element={<SignUp />} />
 
-            <Route path='/home' element={<Private> <Home /> </Private>} />
+            <Route path='/search' element={<Private> <Search /> </Private>} />
             <Route path='/profile' element={<Private> <Profile /> </Private>} />
 
         </Routes>
