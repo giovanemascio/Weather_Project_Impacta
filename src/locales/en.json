@@ -6,6 +6,7 @@
         "Digite seu email": "Enter your email",
         "Senha": "Password",
         "idioma": "language",
+        "Login com Google": "Sign in with google",
 
         "Cadastre-se": "Register",
         "Já possui uma conta? Faça login!": "Already have an account? Log in!",
@@ -17,6 +18,10 @@
         "Seja bem-vindo!": "Welcome!",
         "Bem-vindo(a) de volta!": "Welcome back!",
         "Ops! Algo deu errado.": "Ops! Something went wrong.",
+        "Esqueceu a senha?":"Forgot your password?",
+        "Redefinir senha":"Reset password",
+        "Verifique seu email e redefina sua senha!":"Check your email and reset your password!",
+
 
         "Pesquisar": "Search",
 
@@ -27,6 +32,15 @@
         "Minha conta": "My account",
         "Envie uma imagem do tipo PNG ou JPEG": "Send a PNG or JPEG image",
         "Atualizado com sucesso!": "Updated successfully!",
-        "Nome atualizado com sucesso!": "Name updated successfully!"
+        "Nome atualizado com sucesso!": "Name updated successfully!",
+        "Você não possui uma foto para remover.":"You don't have a photo to remove.",
+        "Foto removida com sucesso!":"Photo removed successfully!",
+        "Erro ao remover a foto. Por favor, tente novamente.": "Error removing photo. Please try again.",
+        "Remover foto": "Remove photo",
+
+        "Nome da cidade inválido!": "Invalid city name!",
+        "Humidade": "Humidity",
+        "Vento": "Wind",
+        "Atualizado": "Updated"
     }
 }

@@ -21,4 +21,10 @@
     /* Ajuste conforme necessário para o novo tamanho da bandeira */
     height: 35px;
     /* Ajuste conforme necessário para o novo tamanho da bandeira */
+    opacity: 0.4;
+}
+
+.language-selector>button.selected img {
+    opacity: 1;
+    /* Define a opacidade para indicar o idioma selecionado */
 }

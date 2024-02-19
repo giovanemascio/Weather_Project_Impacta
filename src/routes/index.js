@@ -5,6 +5,7 @@ import SignIn from '../pages/SignIn'
 import SignUp from '../pages/SignUp';
 import Search from '../pages/Search'
 import Profile from '../pages/Profile'
+import Forgot from '../pages/Forgot'
 // Importar Private para proteger rota admin:
 import Private from './Private';
 
@@ -17,6 +18,7 @@ function RoutesApp() {
         <Routes>
             <Route path='/' element={<SignIn />} />
             <Route path='/register' element={<SignUp />} />
+            <Route path='/reset' element={<Forgot />} />
 
             <Route path='/search' element={<Private> <Search /> </Private>} />
             <Route path='/profile' element={<Private> <Profile /> </Private>} />

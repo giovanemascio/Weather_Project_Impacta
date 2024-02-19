@@ -58,3 +58,29 @@
     margin: 14px;
     font-size: 14px;
 }
+
+.button-forgot {
+    color: #b4b8bb;
+    text-decoration: none;
+    margin: 14px;
+    font-size: 14px;
+}
+
+button.bt-google {
+    margin: 12px;
+    height: 36px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #b4b8bb;
+    color: #FFF;
+    font-size: 16px;  
+    width: 90%;
+    max-width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-google {
+    margin-left: 4px;
+}

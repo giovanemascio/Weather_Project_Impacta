@@ -54,7 +54,8 @@
 }
 
 .winfo .iconCondition {
-    padding-top: 10px; /* Ajuste conforme necessário */
+    padding-top: 10px;
+    /* Ajuste conforme necessário */
     font-size: 100px;
 }
 
@@ -99,4 +100,31 @@
 /* Adicione espaçamento ou margem direita para a última coluna para evitar espaçamento extra à direita */
 .details .col:last-child {
     margin-right: 0;
+}
+
+.error {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgb(206, 20, 20);
+}
+
+.cleaner {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 1.5em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cleaner-btn {
+    padding: 8px 20px;
+    border: 1px solid #121212;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1.0em;
+    justify-content: center;
+    align-items: center;
 }

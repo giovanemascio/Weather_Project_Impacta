@@ -1,6 +1,6 @@
 import { useState, createContext, useEffect } from 'react';
 import { auth, db } from '../services/firebaseConnection';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -17,8 +17,10 @@ function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
 
     const { t, i18n } = useTranslation();
-
     const navigate = useNavigate();
+
+    const provider = new GoogleAuthProvider();
+    //const authGoogle = getAuth(auth);
 
     //Para manter o usuário logado:
     useEffect(() => {
@@ -34,7 +36,7 @@ function AuthProvider({ children }) {
         loadUser();
     }, [])
 
-
+    //Sign:
     async function signIn(email, password) {
         setLoadingAuth(true);
         await signInWithEmailAndPassword(auth, email, password)
@@ -96,6 +98,43 @@ function AuthProvider({ children }) {
             })
     }
 
+    //Forgot password:
+    //Att Enumeração de emails:
+    //https://cloud.google.com/identity-platform/docs/admin/email-enumeration-protection?hl=pt-br&fbclid=IwAR3WDG044k6cTvfj0ysau9o4FoFo4UjjQOnWKjsu60SX3q1hzm5BEisDoqk
+    async function forgot(email) {
+        setLoadingAuth(true);
+
+        await sendPasswordResetEmail(auth, email)
+            //console.log(email)
+            .then(() => {
+                alert(t("Verifique seu email e redefina sua senha!"))
+                //setUser(data);
+                //storageUser(data);
+                setLoadingAuth(false);
+                toast.success(t("Verifique seu email e redefina sua senha!"))
+                navigate("/")
+            })
+            .catch((error) => {
+                alert(error)
+                setLoadingAuth(false);
+            })
+    }
+
+    async function signWithGoogle() {
+        signInWithPopup(auth, provider)
+            .then((result) => {
+                const credential = GoogleAuthProvider.credentialFromResult(result);
+                const user = result.user;
+                setUser(user)
+                console.log("user >", user)
+                navigate("/search")
+            }).catch((error) => {
+                const errorCode = error.code;
+                alert(errorCode)
+            });
+    }
+
+
     // Função para salvar no storage do navegador as infos do user:
     function storageUser(data) {
         localStorage.setItem('@ticketsPRO', JSON.stringify(data))
@@ -115,6 +154,8 @@ function AuthProvider({ children }) {
                 signIn,
                 signUp,
                 logout,
+                forgot,
+                signWithGoogle,
                 loadingAuth,
                 loading,
                 storageUser,
