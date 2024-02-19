@@ -1,8 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCloudSunRain } from '@fortawesome/free-solid-svg-icons';
+import { FcGoogle } from 'react-icons/fc'
 import { useState, useContext } from 'react'
 import './SignIn.css'
-//Para acessar a página de Register atavés de routes:
+//Para acessar a página de Register/Forgot atavés de routes:
 import { Link } from 'react-router-dom'
 //Importar i18n
 //import '../../i18n';
@@ -18,8 +19,7 @@ export default function SignIn() {
     // Criação dos estados para armazenar os valores:
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
-    const { signIn, loadingAuth } = useContext(AuthContext)
+    const { signIn, signWithGoogle, loadingAuth } = useContext(AuthContext)
 
     const { t } = useTranslation();
 
@@ -35,6 +35,14 @@ export default function SignIn() {
             await signIn(email, password);
         }
     }
+
+    //Função do SignWithGoogle:
+    async function handlesignInGoogle(e) {
+        // pra não atualizar a página:
+        e.preventDefault();
+        await signWithGoogle();
+    }
+
 
     return (
         <div className="signIn-container">
@@ -64,10 +72,18 @@ export default function SignIn() {
                 <button type="submit">
                     {loadingAuth ? t('Carregando...') : t('Acessar')}
                 </button>
+
             </form>
+            <button onClick={handlesignInGoogle} className='bt-google'>
+                {t("Login com Google")}
+                <FcGoogle size={22} className='icon-google' />
+            </button>
 
             <Link className="button-link" to="/register">
                 {t("Não possui uma conta? Cadastre-se")}
+            </Link>
+            <Link className="button-forgot" to="/reset">
+                {t("Esqueceu a senha?")}
             </Link>
         </div>
     )

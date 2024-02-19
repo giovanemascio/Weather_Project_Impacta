@@ -6,6 +6,7 @@
         "Digite seu email": "Digite seu email",
         "Senha": "Senha",
         "idioma": "idioma",
+        "Login com Google": "Login com Google",
 
         "Cadastre-se": "Cadastre-se",
         "Já possui uma conta? Faça login!": "Já possui uma conta? Faça login!",
@@ -17,6 +18,10 @@
         "Seja bem-vindo!": "Seja bem-vindo!",
         "Bem-vindo(a) de volta!": "Bem-vindo(a) de volta!",
         "Ops! Algo deu errado.": "Ops! Algo deu errado.",
+        "Esqueceu a senha?":"Esqueceu a senha?",
+        "Redefinir senha":"Redefinir senha",
+        "Verifique seu email e redefina sua senha!":"Verifique seu email e redefina sua senha!",
+        
 
         "Pesquisar": "Pesquisar",
 
@@ -27,7 +32,17 @@
         "Minha conta": "Minha conta",
         "Envie uma imagem do tipo PNG ou JPEG": "Envie uma imagem do tipo PNG ou JPEG", 
         "Atualizado com sucesso!": "Atualizado com sucesso!",
-        "Nome atualizado com sucesso!": "Nome atualizado com sucesso!"
+        "Nome atualizado com sucesso!": "Nome atualizado com sucesso!",
+        "Você não possui uma foto para remover.":"Você não possui uma foto para remover.",
+        "Foto removida com sucesso!":"Foto removida com sucesso!",
+        "Erro ao remover a foto. Por favor, tente novamente.": "Erro ao remover a foto. Por favor, tente novamente.",
+        "Remover foto": "Remover foto",
+
+
+        "Nome da cidade inválido!": "Nome da cidade inválido!",
+        "Humidade": "Humidade",
+        "Vento": "Vento",
+        "Atualizado": "Atualizado"
 
     }
 }
