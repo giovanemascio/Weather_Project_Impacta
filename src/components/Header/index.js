@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import { AuthContext } from '../../contexts/auth'
 //import icons:
-import { FiGlobe, FiUser, FiSettings } from 'react-icons/fi'
+import { FiGlobe, FiStar , FiSettings } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next';
 import './header.css';
 import { LanguageSelector } from '../../components/languageSelector';
@@ -26,9 +26,9 @@ export default function Header() {
                     {t('Pesquisar')}
                 </Link>
 
-                <Link to="/Naosei">
-                    <FiUser color="#FFF" size={24} />
-                    {t('Naosei')}
+                <Link to="/favorites">
+                    <FiStar color="#FFF" size={24} />
+                    {t('Favoritos')}
                 </Link>
 
                 <Link to="/profile">

@@ -42,7 +42,10 @@
         "Nome da cidade inválido!": "Nome da cidade inválido!",
         "Humidade": "Humidade",
         "Vento": "Vento",
-        "Atualizado": "Atualizado"
+        "Atualizado": "Atualizado",
+        "Digite o nome da localidade":"Digite o nome da localidade",
 
+        "Favoritos - Top 3":"Favoritos - Top 3",
+        "Adicionar ao Top 3 favoritos": "Adicionar ao Top 3 favoritos"
     }
 }

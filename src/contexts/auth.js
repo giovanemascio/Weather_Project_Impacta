@@ -74,6 +74,9 @@ function AuthProvider({ children }) {
                 await setDoc(doc(db, "users", uid), {
                     nome: name,
                     avatarUrl: null,
+                    fav1: null,
+                    fav2: null,
+                    fav3: null,
                 })
                     .then(() => {
                         //alert(t("Cadastrado com sucesso!"))
@@ -82,7 +85,10 @@ function AuthProvider({ children }) {
                             uid: uid,
                             nome: name,
                             email: value.user.email,
-                            avatarUrl: null
+                            avatarUrl: null,
+                            fav1: null,
+                            fav2: null,
+                            fav3: null,
                         };
 
                         setUser(data);

@@ -41,6 +41,12 @@
         "Nome da cidade inválido!": "Invalid city name!",
         "Humidade": "Humidity",
         "Vento": "Wind",
-        "Atualizado": "Updated"
+        "Atualizado": "Updated",
+        "Digite o nome da localidade":"Enter location name",
+
+        "Favoritos - Top 3":"Favorites - Top 3",
+        "Adicionar ao Top 3 favoritos": "Add to Top 3 favorites"
+
+
     }
 }

@@ -1,0 +1,52 @@
+.favorite-content {
+    display: flex;
+    align-items: center;
+}
+
+.favorite-text {
+    font-size: 1em;
+    margin: 10px;
+    font-size: 22px;
+}
+
+.container-fav .del-fav {
+    border-radius: 5px;
+    background-color: #181c2e;
+    color: #FFF;
+    padding: 0.5em;
+    margin-left: 0.1em;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    font-size: 0.5em;
+    /* text-align: center;  Alinha o conteúdo centralmente */
+}
+
+table {
+    border: 2px solid #ccc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 2px solid #DDD;
+    padding: 0.35em;
+}
+
+table td {
+    padding: 0.5em;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-right: 1px;
+}
