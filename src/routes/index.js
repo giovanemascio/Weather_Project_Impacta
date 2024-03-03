@@ -8,6 +8,7 @@ import Profile from '../pages/Profile'
 import Forgot from '../pages/Forgot'
 // Importar Private para proteger rota admin:
 import Private from './Private';
+import Favorites from '../pages/Favorites';
 
 
 
@@ -22,6 +23,7 @@ function RoutesApp() {
 
             <Route path='/search' element={<Private> <Search /> </Private>} />
             <Route path='/profile' element={<Private> <Profile /> </Private>} />
+            <Route path='/favorites' element={<Private> <Favorites /> </Private>} />
 
         </Routes>
     )
