@@ -1,6 +1,6 @@
 import { useState, createContext, useEffect } from 'react';
 import { auth, db } from '../services/firebaseConnection';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail, GoogleAuthProvider, signInWithPopup, getAuth } from 'firebase/auth';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
@@ -127,19 +127,60 @@ function AuthProvider({ children }) {
     }
 
     async function signWithGoogle() {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const credential = GoogleAuthProvider.credentialFromResult(result);
-                const user = result.user;
-                setUser(user)
-                console.log("user >", user)
-                navigate("/search")
-            }).catch((error) => {
-                const errorCode = error.code;
-                alert(errorCode)
-            });
-    }
+        setLoadingAuth(true);
+        const auth = getAuth(); // Obtém a instância de autenticação do Firebase
+        const provider = new GoogleAuthProvider(); // Cria uma instância do provedor do Google
+        try {
+            const result = await signInWithPopup(auth, provider); // Faz login com o Google
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const user = result.user;
 
+            // Verifica se o usuário já existe no Firestore
+            const docRef = doc(db, "users", user.uid);
+            const docSnap = await getDoc(docRef);
+
+            if (!docSnap.exists()) {
+                // Se for a primeira vez do usuário, crie um novo registro no Firestore
+                await setDoc(docRef, {
+                    nome: user.displayName,
+                    avatarUrl: user.photoURL,
+                    fav1: null,
+                    fav2: null,
+                    fav3: null
+                });
+
+                // Crie o usuário no Firebase Authentication
+                try {
+                    await createUserWithEmailAndPassword(auth, user.email, user.uid);
+                } catch (error) {
+                    // Ignore o erro "auth/email-already-in-use"
+                    if (error.code !== "auth/email-already-in-use") {
+                        throw error;
+                    }
+                }
+            }
+
+            // Seja o usuário novo ou existente, continue com o processo de login
+            const userData = {
+                uid: user.uid,
+                nome: user.displayName,
+                email: user.email,
+                avatarUrl: user.photoURL,
+                fav1: null,
+                fav2: null,
+                fav3: null
+            };
+            setUser(userData);
+            storageUser(userData);
+            setLoadingAuth(false);
+            navigate("/search");
+
+        } catch (error) {
+            const errorCode = error.code;
+            alert(errorCode);
+            setLoadingAuth(false);
+        }
+    }
 
     // Função para salvar no storage do navegador as infos do user:
     function storageUser(data) {
